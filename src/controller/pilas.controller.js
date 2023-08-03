@@ -3,19 +3,23 @@ const mysql2 = require('mysql2');
 
 
 const readPilas = (req, res) => {
-    const { Pila } = req.body;
-    //const { id } = req.params; // para extraer el parametro de la ruta de la solicitud
-    const readQuery = `SELECT * FROM pilas;`;
-    const  query = mysql2.format(readQuery, [Pila]);
+    // const { Pila } = req.body;
+    // //const { id } = req.params; // para extraer el parametro de la ruta de la solicitud
+    // const readQuery = `SELECT * FROM pilas;`;
+    // const  query = mysql2.format(readQuery, [Pila]);
 
-    database.query(query,(err,result)=>{
-        if (err) throw err;
-        if (result[0] !== undefined){
-            res.json(result);
-        }else{
-            res.json({message: 'Pila no encontrado'})
-        }
-    });
+    // database.query(query,(err,result)=>{
+    //     if (err) throw err;
+    //     if (result[0] !== undefined){
+    //         res.json(result);
+    //     }else{
+    //         res.json({message: 'Pila no encontrado'})
+    //     }
+    // });
+    res.json({
+      OK:"",
+      msj:"MOSTRANDO MENSAJE",
+  });
 };
 const readActivePilas = (req, res) => {
     const { Pila } = req.body;
